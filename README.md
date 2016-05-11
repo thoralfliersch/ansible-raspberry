@@ -4,6 +4,8 @@
   * your raspberry must be a lan cable plugin
   * bring your raspberry up
   * execute `nmap -sn 192.168.1.1/24` (replace CIDR Block with your own)
+  * edit hosts.dist file and save it as hosts
+    * you must for first run all founded IP's placed in the part like "setup"
 
 ### tasks
 - [x] create how to use
