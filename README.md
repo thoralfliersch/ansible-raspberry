@@ -3,7 +3,7 @@
   * plugin the sd-card in your raspberry
   * your raspberry must be a lan cable plugin
   * bring your raspberry up
-  * execute `nmap -sn 192.168.178.1/24` (replace CIDR Block with your own)
+  * execute `nmap -sn 192.168.1.1/24` (replace CIDR Block with your own)
 
 ### tasks
 - [x] create how to use
