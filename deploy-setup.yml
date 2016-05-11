@@ -1,0 +1,6 @@
+---
+- hosts: setup
+  sudo: yes
+  remote_user: pi
+  roles:
+      - setup

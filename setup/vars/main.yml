@@ -1,0 +1,22 @@
+---
+ssh_key_to_transfer: ~/.ssh/id_rsa.pub
+directorys_to_delete:
+    - Desktop
+    - Documents
+    - Downloads
+    - Music
+    - Pictures
+    - Public
+    - Templates
+    - Videos
+    - oldconffiles
+    - python_games
+
+packages_to_delete:
+    - wolfram-engine
+
+packages_to_install:
+    - ncdu
+    - htop
+    - git
+    - screen

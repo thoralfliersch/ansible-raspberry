@@ -1,0 +1,50 @@
+---
+- name: update apt cache
+  sudo: yes
+  apt:
+      update_cache: yes
+      cache_valid_time: 3600
+
+- name: upgrade
+  sudo: yes
+  apt: upgrade=yes
+
+- name: delete packages to make space free
+  apt: pkg={{ item }} state=absent
+  sudo: yes
+  with_items: "{{ packages_to_delete }}"
+
+- name: delete unused directorys in pi's homedir
+  file:
+      path: /home/pi/{{ item }}
+      state: absent
+  with_items: "{{ directorys_to_delete }}"
+
+- name: add own local ssh key
+  authorized_key: user=pi state=present key="{{ lookup('file', item) }}"
+  with_fileglob: "{{ ssh_key_to_transfer }}"
+
+- name: autoremove any unused packages
+  command: apt-get autoremove warn=no
+  sudo: yes
+
+- name: autoclean the system
+  command: apt-get autoclean warn=no
+  sudo: yes
+
+- name: install common packages
+  apt:
+      pkg: "{{ item }}"
+      state: present
+  sudo: yes
+  with_items: "{{ packages_to_install }}"
+
+- name: set hostname
+  hostname: name={{ host_name }}
+  when: host_name is defined
+
+- name: set hostname in /etc/hosts
+  lineinfile:
+      dest: /etc/hosts
+      regexp: ^127\.0\.1\.1
+      line: "127.0.1.1  	{{ host_name }}"
