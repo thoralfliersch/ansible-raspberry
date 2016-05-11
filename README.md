@@ -15,7 +15,7 @@
 
 ### tasks
 - [x] create how to use
-- [ ] create playbook and role for inventory part "setup"
+- [x] create playbook and role for inventory part "setup"
 - [ ] create playbook and role for inventory part "raspberrys"
 - [ ] create playbook and role for inventory part "nginx"
 - [ ] create playbook and role for inventory part "database"
