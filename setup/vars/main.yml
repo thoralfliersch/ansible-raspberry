@@ -1,5 +1,9 @@
 ---
 ssh_key_to_transfer: ~/.ssh/id_rsa.pub
+keyboard_model: pc105
+keyboard_layout: de
+keyboard_options: terminate:ctrl_alt_bksp
+timezone: Europe/Berlin
 directorys_to_delete:
     - Desktop
     - Documents

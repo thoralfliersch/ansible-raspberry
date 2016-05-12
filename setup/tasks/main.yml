@@ -48,3 +48,23 @@
       dest: /etc/hosts
       regexp: ^127\.0\.1\.1
       line: "127.0.1.1  	{{ host_name }}"
+
+- name: set timezone
+  template:
+      src: timezone.j2
+      dest: /etc/timezone
+      owner: root
+      group: root
+      mode: 0644
+  notify:
+      - update localtime
+
+- name: set keyboard layout
+  template:
+      src: keyboard.j2
+      dest: /etc/default/keyboard
+      owner: root
+      group: root
+      mode: 0644
+  notify:
+      - load keyboardlayout
