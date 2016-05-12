@@ -5,7 +5,7 @@
   * execute `nmap -sn 192.168.1.1/24` (replace CIDR Block with your own)
   * edit hosts.dist file and save it as hosts
     * you must for first run all founded IP's placed in the part like "setup"
-  * login to your raspberrys an expand filesystem
+  * login to your raspberrys and expand filesystem
     * default-user: `pi`
     * default-password: `raspberry`
     * `sudo raspi-config`

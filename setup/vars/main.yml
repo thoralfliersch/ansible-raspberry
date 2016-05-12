@@ -14,9 +14,44 @@ directorys_to_delete:
 
 packages_to_delete:
     - wolfram-engine
+    - firefox
+    - youtube-dl
+    - brasero-common
+    - caja-common
+    - engrampa-common
+    - eom-common
+    - mate-desktop-common
+    - nuscratch
+    - supercollider-common
+    - shotwell-common
+    - scratch
+    - rhythmbox-data
+    - pluma-common
+    - minecraft-pi
+    - libreoffice-common
+    - brltty-x11
+    - deja-dup
+    - duplicity
+    - espeak
+    - idle
+    - marco-common
+    - mozo
+    - mplayer2
+    - yelp
+    - youtube-dlg
+    - uvcdynctrl-data
+    - update-manager
+    - transmission-common
+    - thunderbird
+    - speech-dispatcher
+    - seahorse
+    - colord
 
 packages_to_install:
     - ncdu
     - htop
     - git
     - screen
+    - aptsh
+    - tree
+    - deborphan

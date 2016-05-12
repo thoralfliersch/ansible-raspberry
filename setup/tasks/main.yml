@@ -25,7 +25,7 @@
   with_fileglob: "{{ ssh_key_to_transfer }}"
 
 - name: autoremove any unused packages
-  command: apt-get autoremove warn=no
+  command: apt-get autoremove -y warn=no
   sudo: yes
 
 - name: autoclean the system
