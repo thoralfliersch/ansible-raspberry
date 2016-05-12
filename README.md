@@ -16,6 +16,8 @@
 ### tasks
 - [x] create how to use
 - [x] create playbook and role for inventory part "setup"
+  - [ ] set Timezone `(/etc/timezone)`
+  - [ ] set Keyboardlayout `(/etc/default/keyboard)`
 - [ ] create playbook and role for inventory part "raspberrys"
 - [ ] create playbook and role for inventory part "nginx"
 - [ ] create playbook and role for inventory part "database"
