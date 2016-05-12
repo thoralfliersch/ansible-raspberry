@@ -16,8 +16,16 @@
 ### tasks
 - [x] create how to use
 - [x] create playbook and role for inventory part "setup"
-  - [ ] set Timezone `(/etc/timezone)`
-  - [ ] set Keyboardlayout `(/etc/default/keyboard)`
+  - [x] update apt cache
+  - [x] upgrade system
+  - [x] delete unused packages
+  - [x] delete unused directorys in pi's homefolder
+  - [x] add ssh key(s)
+  - [x] autoremove and autoclean system
+  - [x] install common packages
+  - [x] set hostname
+  - [x] set Timezone `(/etc/timezone)`
+  - [x] set Keyboardlayout `(/etc/default/keyboard)`
 - [ ] create playbook and role for inventory part "raspberrys"
 - [ ] create playbook and role for inventory part "nginx"
 - [ ] create playbook and role for inventory part "database"
