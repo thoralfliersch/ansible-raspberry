@@ -26,6 +26,7 @@
   - [x] set hostname
   - [x] set Timezone `(/etc/timezone)`
   - [x] set Keyboardlayout `(/etc/default/keyboard)`
+  - [x] restart 
 - [ ] create playbook and role for inventory part "raspberrys"
 - [ ] create playbook and role for inventory part "nginx"
 - [ ] create playbook and role for inventory part "database"
