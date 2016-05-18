@@ -1,5 +1,5 @@
 server {
-    {% if item.value.hostname == "tholie.dnsuser.de" %}
+    {% if item.value.hostname == "{{ nginx_default_vhost }}" %}
     listen 80 default_server;
     listen [::]:80 default_server;
     {% else %}
