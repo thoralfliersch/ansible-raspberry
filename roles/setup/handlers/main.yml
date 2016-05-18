@@ -1,0 +1,6 @@
+---
+- name: update localtime
+  command: cp /usr/share/zoneinfo/{{ timezone }} /etc/localtime
+
+- name: load keyboardlayout
+  command: invoke-rc.d keyboard-setup start

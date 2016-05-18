@@ -1,0 +1,19 @@
+server {
+    {% if item.value.hostname == "tholie.dnsuser.de" %}
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    {% else %}
+    listen 80;
+    listen [::]:80;
+    {% endif %}
+
+
+	root {{ item.value.hostroot }};
+	index index.html index.htm index.nginx-debian.html;
+	server_name {{ item.value.hostname }};
+    access_log /var/log/nginx/{{ item.value.hostname }}.access.log;
+    error_log /var/log/nginx/{{ item.value.hostname }}.error.log;
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
