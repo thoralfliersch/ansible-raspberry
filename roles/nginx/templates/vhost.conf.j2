@@ -9,11 +9,20 @@ server {
 
 
 	root {{ item.value.hostroot }};
-	index index.html index.htm index.nginx-debian.html;
+	index index.html index.htm index.php index.nginx-debian.html;
 	server_name {{ item.value.hostname }};
     access_log /var/log/nginx/{{ item.value.hostname }}.access.log;
     error_log /var/log/nginx/{{ item.value.hostname }}.error.log;
-	location / {
+
+    location / {
 		try_files $uri $uri/ =404;
 	}
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_param PATH_TRANSLATED $document_root$fastcgi_script_name;
+        fastcgi_index index.php;
+        include fastcgi_params;
+    }
 }

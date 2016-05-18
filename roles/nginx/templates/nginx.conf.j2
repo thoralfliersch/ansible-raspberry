@@ -34,6 +34,13 @@ http {
 	ssl_prefer_server_ciphers on;
 
 	##
+	# PHP Handler
+	##
+	upstream php {
+    	server unix:/var/run/php5-fpm.sock;
+	}
+
+	##
 	# Logging Settings
 	##
 

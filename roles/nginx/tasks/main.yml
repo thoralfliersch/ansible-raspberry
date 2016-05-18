@@ -65,7 +65,7 @@
   template:
       src: templates/index.html.j2
       dest: "{{ item.value.hostroot }}/index.html"
-      owner: root
-      group: root
+      owner: pi
+      group: pi
       mode: 0644
   with_dict: nginx_vhosts
