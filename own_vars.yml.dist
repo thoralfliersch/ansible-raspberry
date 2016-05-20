@@ -1,0 +1,17 @@
+nginx_default_vhost: vhost1.example.com
+nginx_vhosts:
+    vhost1:
+        hostname: 'vhost1.example.com'
+        hostroot: '/var/www/html/vhost1.example.com'
+        repository: 'git@github.com:user/vhost1.example.com.git'
+    vhost2:
+        hostname: 'vhost2.example.com'
+        hostroot: '/var/www/html/vhost2.example.com'
+        repository: ''
+    vhost3:
+        hostname: 'vhost3.example.com'
+        hostroot: '/var/www/html/vhost1.example.com'
+        repository: ''
+
+database_admin_user: username
+database_admin_pass: password
