@@ -1,0 +1,8 @@
+---
+- hosts: database
+  sudo: yes
+  remote_user: pi
+  roles:
+      - database
+  vars_files:
+      - own_vars.yml

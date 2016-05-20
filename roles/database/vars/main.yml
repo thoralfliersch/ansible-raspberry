@@ -1,0 +1,7 @@
+---
+database_package:
+    - python-mysqldb
+    - mysql-common
+    - mysql-server
+    - mysql-client
+database_port: 3306

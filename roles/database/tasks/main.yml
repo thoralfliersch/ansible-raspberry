@@ -1,0 +1,33 @@
+---
+- name: update apt-cache
+  sudo: yes
+  apt:
+      update_cache: yes
+      cache_valid_time: 3600
+
+- name: install database
+  apt:
+      pkg: "{{ item }}"
+      state: present
+  sudo: yes
+  with_items: "{{ database_package }}"
+
+- name: copy own database config
+  template:
+      src: my.cnf.j2
+      dest: /etc/mysql/my.cnf
+      owner: root
+      group: root
+      mode: 0644
+  notify:
+      - restart mysql
+
+- name: create db admin user
+  mysql_user:
+      name: "{{ database_admin_user }}"
+      password: "{{ database_admin_pass }}"
+      priv: "*.*:ALL,GRANT"
+      host: "%"
+      state: present
+  notify:
+      - restart mysql
