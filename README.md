@@ -9,6 +9,7 @@
     * default-user: `pi`
     * default-password: `raspberry`
     * `sudo raspi-config`
+    * reboot your raspberrys
   * execute `ansible-playbook deploy-setup.yml -i hosts --ask-pass`
   * enter the raspians default passwort `raspberry`
   * move all hosts from part "setup" to part "raspberrys"
@@ -26,7 +27,11 @@
   - [x] set hostname
   - [x] set Timezone `(/etc/timezone)`
   - [x] set Keyboardlayout `(/etc/default/keyboard)`
-  - [x] restart 
+  - [x] restart
 - [ ] create playbook and role for inventory part "raspberrys"
-- [ ] create playbook and role for inventory part "nginx"
-- [ ] create playbook and role for inventory part "database"
+- [x] create playbook and role for inventory part "nginx"
+- [x] create playbook and role for inventory part "database"
+- [ ] create playbook and role for update/upgrade all raspberrys
+- [ ] create Makefile
+- [ ] create playbook and role for inventory part "monitor"
+  - this is my own project to monitor all my raspberrys
