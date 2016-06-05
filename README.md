@@ -1,5 +1,8 @@
 ### how to use
   * flash a sd-card with raspbian/jessie
+    * `sudo diskutil list`
+    * `sudo diskutil unmountDisk /dev/disk1` replace /dev/disk1 with your volume
+    * `sudo dd bs=1m if=Downloads/raspbian-jessie-lite.img | pv | sudo dd of=/dev/disk1` replace /dev/disk1 with your volume
   * plugin the sd-card in your raspberry
   * bring your raspberry up and in a cable based lan
   * execute `nmap -sn 192.168.1.1/24` (replace CIDR Block with your own)
