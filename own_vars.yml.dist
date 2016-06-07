@@ -15,3 +15,13 @@ nginx_vhosts:
 
 database_admin_user: username
 database_admin_pass: password
+database_host: host
+
+monitor:
+    packages:
+        - python-mysqldb
+    database:
+        host: 'host'
+        user: 'user'
+        pass: 'pass'
+        base: 'database'
