@@ -1,0 +1,14 @@
+---
+- name: install requirements
+  apt:
+      pkg: "{{ item }}"
+      state: present
+  with_items: "{{ monitor.packages }}"
+
+- name: create monitor app
+  template:
+      src: monitor.py.j2
+      dest: "/home/pi/monitor.py"
+      owner: pi
+      group: pi
+      mode: 0755

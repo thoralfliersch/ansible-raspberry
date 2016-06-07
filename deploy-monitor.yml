@@ -1,0 +1,8 @@
+---
+- hosts: monitor
+  sudo: yes
+  remote_user: pi
+  roles:
+      - monitor
+  vars_files:
+      - own_vars.yml
